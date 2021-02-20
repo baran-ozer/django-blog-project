@@ -1,8 +1,9 @@
 from django.db import models
 from autoslug import AutoSlugField
+
 class KategoriModel(models.Model):
     isim = models.CharField(max_length=40, blank=False, null=False)
-    slug = AutoSlugField(populate_from='isim', unique=True)
+    slug = AutoSlugField(populate_from="isim", unique=True)
 
     class Meta:              
         db_table= "kategori"                     #tablo ismini manuel girmek için

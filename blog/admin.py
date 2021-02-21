@@ -1,6 +1,12 @@
 from django.contrib import admin
-from blog.models import KategoriModel
-from blog.models import YazilarModel
+from blog.models import KategoriModel, YazilarModel
 
 admin.site.register(KategoriModel)
-admin.site.register(YazilarModel)
+
+class YazilarAdmin(admin.ModelAdmin):
+    search_fields = ("baslik", "icerik")
+    list_display = (
+        "baslik" , "olusturulma_tarihi" , "duzenlenme_tarihi"       #admin panel model sütun başlıkları
+    )
+
+admin.site.register(YazilarModel, YazilarAdmin)

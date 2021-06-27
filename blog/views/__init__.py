@@ -1,1 +1,0 @@
-from .iletisim import iletisim

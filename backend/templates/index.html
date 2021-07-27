@@ -86,7 +86,7 @@
                   <div class="input-group mb-3">
                       {{ field.errors }}
                       <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1" style="width: 7rem"><b>{{ field.label_tag }}</b></span>
+                        <span class="input-group-text" id="basic-addon1" style="width: 6rem"><b>{{ field.label_tag }}</b></span>
                       </div>
 
                       {{ field }}
@@ -94,9 +94,15 @@
                       {% if field.help_text %}
                         <p class="help">{{ field.help_text|safe }}</p>
                       {% endif %}
-                      <div class="input-group-append">
-                        <span class="input-group-text">cm</span>
-                      </div>
+                      {% if field == form.agirlik %}
+                        <div class="input-group-append">
+                          <span class="input-group-text" style="width: 3rem">kg</span>
+                        </div>
+                      {% else %}
+                        <div class="input-group-append">
+                          <span class="input-group-text" style="width: 3rem">cm</span>
+                        </div>
+                      {% endif %}
                   </div>
               {% endfor %}
 

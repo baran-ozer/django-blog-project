@@ -94,6 +94,15 @@
                       {% if field.help_text %}
                         <p class="help">{{ field.help_text|safe }}</p>
                       {% endif %}
+                      {% if field == form.agirlik %}
+                        <div class="input-group-append">
+                          <span class="input-group-text" style="width: 3rem">kg</span>
+                        </div>
+                      {% else %}
+                        <div class="input-group-append">
+                          <span class="input-group-text" style="width: 3rem">cm</span>
+                        </div>
+                      {% endif %}
                   </div>
               {% endfor %}
 

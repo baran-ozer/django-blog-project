@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Kargo Fiyat Hesapla{% endblock %}
+{% block title %}En Ucuz Kargo{% endblock %}
 {% block extra_head %}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,7 +35,7 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Kargo Fiyat Hesapla</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -93,15 +93,6 @@
                       
                       {% if field.help_text %}
                         <p class="help">{{ field.help_text|safe }}</p>
-                      {% endif %}
-                      {% if field == form.agirlik %}
-                        <div class="input-group-append">
-                          <span class="input-group-text" style="width: 3rem">kg</span>
-                        </div>
-                      {% else %}
-                        <div class="input-group-append">
-                          <span class="input-group-text" style="width: 3rem">cm</span>
-                        </div>
                       {% endif %}
                   </div>
               {% endfor %}
